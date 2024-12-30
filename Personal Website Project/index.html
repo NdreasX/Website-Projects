@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>Kellogg</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/d44f8edff8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="banner" id="banner">
+    <nav>
+      <a href="index.html"><img src="assets/logo.png"></a>
+      <div id="navLinks" class="nav-links">
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="pages/aboutus.html">About us</a></li>
+          <li><a href="#fav_Recipes">Contact us</a></li>
+          <li><a href="pages/product.html">Product</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h1>Find your favorite meals for Breakfast</h1>
+      <p>Awaken your senses with our mouthwatering breakfast offerings!</p>
+      <a href="pages/product.html" class="hero-btn">Check it out!</a>
+    </div>
+  </section>
+
+  <section class="fav_Meals" id="fav_Meals">
+    <h1>Favorite Meals</h1>
+    <div class="row">
+      <div class="course-col">
+        <img src="assets/Apple_Jacks_Marsmellow.png" alt="Photo_Meals" />
+        <h3>Apple Jacks Marsmellow</h3>
+      </div>
+      <div class="course-col">
+        <img src="assets/Honey Smakcs  (Kellog's).png" alt="Photo_Meals" />
+        <h3>Honey Smakcs</h3>
+      </div>
+      <div class="course-col">
+        <img src="assets/FroastedLakes.png" alt="Photo_Meals" />
+        <h3>FroastedLakes</h3>
+      </div>
+    </div>
+    <a href="pages/product.html" class="hero-btn2">See More!</a>
+  </section>
+
+  <section class="fav_Recipes" id="fav_Recipes">
+    <h1>Favorite Recipes</h1>
+    <div class="row">
+      <div class="recipes-col">
+        <a href="pages/fruitMuffins.html">
+          <img src="assets/Applesauce Fruit Muffins.jpg" alt="Applesauce Fruit Muffins">
+          <div class="layer">
+            <h3>Applesauce Fruit Muffins</h3>
+          </div>
+        </a>
+      </div>
+      <div class="recipes-col">
+        <a href="pages/bananaDonuts.html">
+          <img src="assets/Baked Banana Donuts.jpg" alt="Baked Banana Donuts">
+          <div class="layer">
+            <h3>Baked Banana Donuts</h3>
+          </div>
+        </a>
+      </div>
+      <div class="recipes-col">
+        <img src="assets/Apple Pie Pudding.jpg">
+        <div class="layer">
+          <h3>Apple Pie Pudding</h3>
+        </div>
+      </div>
+    </div>
+    <a href="pages/product.html" class="hero-btn3">See More!</a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <img src="assets/logo.png" alt="Logo">
+      <p>Thank you for visiting our website! Enjoy our offerings!</p>
+    </div>
+  </footer>
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+      nav.classList.add("open");
+    }
+    function hideMenu() {
+      navLinks.style.right = "-360px";
+      nav.classList.remove("open");
+    }
+    document.querySelector("#navLinks li a[href='#home']").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".banner").scrollIntoView({behavior: "smooth"});
+    });
+    document.querySelector("#navLinks li a[href='#fav_Meals']").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".fav_Meals").scrollIntoView({behavior: "smooth"});
+    });
+    document.querySelector("#navLinks li a[href='#fav_Recipes']").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".fav_Recipes").scrollIntoView({behavior: "smooth"});
+    });
+  </script>
+</body>
+
+</html>
